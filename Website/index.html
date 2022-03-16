@@ -1,0 +1,104 @@
+
+<html> 
+ <head>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <title> Middle-Earth Fan Site... Page... Thing </title> 
+  
+  <script>
+    function banner(){
+      var text = confirm("Did You Really Want to Click on My Banner?");
+      return text;
+    }
+    
+    function answer(){ 
+      var radio = document.getElementsByName("trivia"); 
+      var selection = false; 
+      var message = ""; 
+
+      for( var i = 0; i < radio.length; i++) { 
+        if(radio[i].value == "yes" && radio[i].checked == true) { 
+          selection = true; 
+        } //end if statement 
+      } //end for loop
+
+      if(selection == true) {
+        message = message + "<b><p style='color:green'>Well done!</p></b>"; 
+      } else { 
+        message = message + "<b><p style='color:red'>You. Shall not. Pass!</p></b>"; 
+      }
+        document.getElementById("response").innerHTML = message;
+
+} //end function answer 
+    
+  </script>
+
+  <style>
+
+  </style>
+ 
+ </head> 
+ <body id="background"> 
+   
+  <a onclick="return banner()" href=https://www.lego.com/en-us">
+   <header id="banner"><center> Hello there. </center></header>
+  </a>
+   
+   <nav>
+     <ul id="navmenu">
+       <li class="navitem"> <a href="index.html"> Home </a> </li>
+       <li class="navitem"> <a href="games.html"> Games </a> </li>
+       <li class="navitem"> <a href="videos.html"> Videos </a> </li>
+   </ul> </nav>
+  
+<div class="rightside">
+
+   <div class="wrap-trivia">
+    <h2><b>Middle-Earth</b></h2>
+    <p class="paragraph">What is the name of the wizard who plays a vital role in both The Hobbit and Lord of the Rings?</p>
+    <form>
+      <div id="response"> </div>
+      <input type="radio" name="trivia" value="no"> Galdor <br>
+      <input type="radio" name="trivia" value="yes"> Gandalf <br>
+      <input type="radio" name="trivia" value="no"> Glorfindle <br>
+      <input type="radio" name="trivia" value="no"> Merlin <br>
+      <input onclick="answer()" type="button" id="submit" value="Click Here">
+     </form>
+   </div>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/C1s4Tr7Ag9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div> 
+
+<div class="leftside">
+
+  <h1><center> Middle-Earth </center></h1>
+  <p> Welcome, my friend, to my <u>fan site</u> of <b>Middle-Earth</b>. This site merely gives you the basics on J.R.R. Tolkien's great work. I am a major fan of Tolkien's <span class="wrap-text"> The Hobbit and The Lord of the Rings </span>, and of both movie trilogies. The main subjects of what you can learn about on this site are listed below.
+  </p>
+
+  <div class="wrap-list">
+   <ol>
+  	<li class="listitem"> Information about the history of Middle-Earth </li>
+  	<li class="listitem"> Information on the characters of Middle-Earth </li>
+  	<li class="listitem"> The plot of the storyline </li>
+  </div>
+
+    <img width="70%" src="https://thumbs.dreamstime.com/b/white-tree-of-gondor-isolated-black-and-white-eps-158792230.jpg" />
+    <img width="70%" src="https://images.stockfreeimages.com/5520/sfixl/55202199.jpg" />
+
+  </div>
+  
+  <div class="clearfloat"></div>
+
+
+<audio width="400" height="220" controls>
+<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+Your browser does not support HTML 5 audio.
+</audio>
+
+    
+    <hr />
+
+    <center> Gannon <a href="https://www.lego.com/en-us">My Favorite Website</a> </center>
+    <footer id="footer">Namarie (farewell).</footer>
+ </body> 
+</html>
