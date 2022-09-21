@@ -1,0 +1,162 @@
+
+<html>
+  <head>
+    <title> 
+    	JavaScript Practice 
+    </title>
+    <script>
+
+     var games = ["monopoly", "hide 'n seek", "Metroid", "baseball", 61];
+
+      function start() {
+        var age = 33;
+        var name = "Charles Xavier"
+        alert(name + "  is  " + age);
+      } //end start function
+      function math(){
+        var calc = 133 * 5324 - 535 / 2 + 123;
+        alert(calc);
+      } //end function math
+
+
+      function question(){
+        var question = prompt("What is one of my favorite colors?");
+       if(question == "purple" || question == "green" || question == "blue"){
+           alert("Correct.");
+       } else {
+          alert("Incorrect.")
+       }
+      } //end function question
+
+
+      function rate(){
+        var q = prompt("How much do you like JavaScript 1 - 10?");
+
+        if(q < 4){
+          alert("I see.");
+        } else if(q < 7){
+          alert("Good.");
+        } else {
+          alert("Good answer!");
+        }
+      } //end function rate
+      
+      function change(){
+        var edit = document.querySelector("#find");
+        edit.innerHTML = "This Page is Full of Surprises!";
+      } //end function change
+
+      var pass = 1;
+      function toggle(){
+        var twitch = document.querySelector("#rotate");
+        if (pass == 1){
+          twitch.innerHTML = "You didn't see anything...";
+          pass = 2;
+          return;
+        } else if (pass == 2) {
+          twitch.innerHTML = "<img src='https://simplycoding.s3-us-west-2.amazonaws.com/Images/piskelFish.png' />";
+          pass = 3;
+          return; 
+        } else {
+          twitch.innerHTML = "Ta-da!";
+          pass = 1;
+          return;
+        }
+      } //end function toggle
+      
+      function joke(){
+        var q = prompt("What color was George Washington's white horse?");
+        while(q != "white"){
+          q = prompt("What color was George Washington's white horse?");
+        }
+        alert("Yes, of course!");
+      } //end function joke
+
+      function oddCounts(){
+        for(var i = 1; i < 10; i+=2){
+          alert(i);
+        }
+      } //end function oddCounts
+
+      
+      var sentence = "Railroad crossing. Look out for the cars! Can you spell that without any r's?";
+      var array = [];
+      for (var i = 0; i < sentence.length; i++){
+       if(sentence[i] == "r") {
+         array.push(sentence[i]); 
+        }
+      }
+
+      var shirt = {color:"red and black", price: 19.92, size: "XL", shipping: 
+     2.37};
+       function obj(){
+         var ask = prompt("What do you want to know about my shirt? (color, price, size, or shipping):");
+         alert("This shirt's " + ask + " + is " + shirt[ask]);
+       } //end function obj
+
+       var backandforth = 0;
+       function morph(){
+        var box = document.querySelector("#box");
+        if(backandforth == 0){
+         box.style.backgroundColor = "black";
+         box.style.border = "12px ridge yellow";
+         box.innerHTML = "Did you just see that!";
+         backandforth = 1;
+         return;
+        } else {
+          box.style.color = "orange";
+          box.style.backgroundColor = "green";
+          box.style.border = "";
+          box.innerHTML = "Change is on it's way!"; 
+          backandforth = 0;
+          return;
+        }
+       } //end function morph
+    </script>
+    <style>
+      #box{
+        color: orange;
+        background-color: green;
+        height: 250px;
+        width: 250px; 
+    </style>
+  </head>
+  <body>
+    <div>
+      There are <script>document.write(array.length);</script> r's in the sentence: "<script>document.write(sentence);</script>"
+    </div>
+
+    <p>A game I like is <script> document.write(games[2]); </script> </p>
+
+    <div id="rotate">This text may change, even into a picture</div>
+
+    <div id="find">My JavaScript Practice Page</div>
+
+    <input type="button" onclick="start()" value="Alert Me">
+
+    <input type="button" onclick="math()" value="Calculate">
+
+    <input type="button" onclick="question()" value="Question"> 
+
+    <input type="button" onclick="rate()" value="Rate JS"> 
+
+    <input type="button" onclick="change()" value="Magic Button">
+
+    <input type="button" onclick="toggle()" value="Change Button">
+
+    <input type="button" onclick="joke()" value="Joke">
+
+    <input type="button" onclick="oddCounts()" value="For Loop">
+
+    <input type="button" onclick="obj()" value="Click for Info">
+
+    <input type="button" onclick="morph()" value="Change the Box">
+
+    <div id="box">You're about to see some change</div>
+  </body>
+</html>
+
+
+
+
+
